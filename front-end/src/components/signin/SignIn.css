@@ -1,0 +1,134 @@
+/* Reset margins and set full height */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Main container with background */
+.main-signin-container {
+  width: 100vw;
+  height: 100vh;
+  padding: 40px;
+  
+  /* Background */
+  background-color: #000;
+  background-image: url('https://logincdn.msauth.net/shared/5/images/fluent_web_dark_2_bf5f23287bc9f60c9be2.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  /* Flexbox to center content */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* Prevent image flicker */
+  background-attachment: fixed;
+}
+
+.form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+        padding: 40px;
+        width: 500px;
+        height: 500px;
+        background: #28282b;
+        box-shadow: 0 0 5px #28282b;
+}
+
+.heading {
+        color: rgb(224, 220, 213);
+        text-align: center;
+        font-size:1.7rem;
+        
+}
+
+.account{
+        color: rgb(224, 220, 213);
+        text-align: center;
+        font-size: 1rem;
+}
+
+/* In your CSS file (e.g., SignIn.css) */
+
+.signup-link {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 14px;
+  color: white; /* Color of the paragraph text */
+}
+
+.signup-link a {
+  color: #0078d4; /* Blue color for the Link */
+  text-decoration: none; /* Remove underline */
+  font-weight: 600;
+}
+
+.signup-link a:hover {
+  text-decoration: underline; /* Optional: underline on hover */
+  color: #005a9e;
+}
+input {
+  width: 100%;
+  padding: 15px;
+  margin: 10px 0;
+
+  /* Background & text */
+  border: none;
+  border-bottom: 1px solid white;
+  background: #28282b;
+
+  /* Font */
+  font-size: 1rem;
+  font-family: 'Segoe UI', sans-serif;
+
+  /* Smooth focus effect */
+  outline: none;
+  transition: all 0.3s ease;
+  color: #c7c7c7;
+}
+
+/* Placeholder */
+input::placeholder {
+  color: #c7c7c7; /* Gray, not black */
+  font-size: 1rem;
+  opacity: 1; /* Some browsers dim placeholders */
+}
+
+.hr {
+  height: 1px;
+  background: #3c59ff;
+}
+
+/* Focus effect (important for UX) */
+input:focus {
+  padding: 15px;
+ /* Microsoft-style focus ring */
+  transform: scale(1.01);
+}
+
+.submit-btn {
+        padding: 10px;
+        font-size: 1rem;
+        font-weight: 700;
+        border: none;
+        transition: transform 0.3s ease-in-out;
+        background-color: #47a9ff;
+        color: rgb(208, 208, 208);
+}
+
+.submit-btn:hover{
+cursor: pointer;
+transform: translateY(-4px);
+background-color: #0078d4;
+
+}

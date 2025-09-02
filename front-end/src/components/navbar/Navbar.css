@@ -1,0 +1,134 @@
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Main Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5%;
+  background: #28282b;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid #3c59ff33;
+
+  font-family: 'Segoe UI', sans-serif;
+  width: 100vw;
+}
+
+/* Logo */
+.nav-logo a {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
+}
+
+.nav-logo a span {
+  color: #47a9ff;
+}
+
+/* Desktop Menu */
+.nav-menu.desktop {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.nav-menu.desktop a {
+  color: #c7c7c7;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.nav-menu.desktop a:hover,
+.nav-menu.desktop a.active {
+  color: #47a9ff;
+}
+
+.nav-menu.desktop a.active::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #47a9ff;
+  border-radius: 1px;
+}
+
+/* Mobile Menu Button (Hamburger) */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.nav-toggle span {
+  width: 28px;
+  height: 3px;
+  background: #47a9ff;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+/* Hamburger Animation */
+.nav-toggle.open span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.nav-toggle.open span:nth-child(2) {
+  opacity: 0;
+}
+.nav-toggle.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -6px);
+}
+
+/* Mobile Menu */
+.nav-menu.mobile {
+  display: none;
+  flex-direction: column;
+  background: #28282b;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  padding: 1rem 5%;
+  gap: 1rem;
+  border-bottom: 1px solid #3c59ff33;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.nav-menu.mobile.open {
+  display: flex;
+}
+
+.nav-menu.mobile a {
+  color: #c7c7c7;
+  text-decoration: none;
+  font-size: 1.1rem;
+  padding: 0.5rem 0;
+  transition: color 0.3s ease;
+}
+
+.nav-menu.mobile a:hover,
+.nav-menu.mobile a.active {
+  color: #47a9ff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-menu.desktop {
+    display: none;
+  }
+
+  .nav-toggle {
+    display: flex;
+  }
+}

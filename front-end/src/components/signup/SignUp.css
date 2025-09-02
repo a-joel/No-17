@@ -1,0 +1,122 @@
+/* === Main Container (Same as Sign In) === */
+.main-signup-container {
+  width: 100vw;
+  height: 100vh;
+  padding: 40px;
+  background-color: #000;
+  background-image: url('https://logincdn.msauth.net/shared/5/images/fluent_web_dark_2_bf5f23287bc9f60c9be2.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-attachment: fixed;
+}
+
+.hr-signup {
+  height: 1px;
+  margin: 20px 0 30px 0;
+  background: #3c59ff;
+}
+
+/* === Form Card === */
+.signup-form-container {
+  width: 500px;
+  padding: 40px;
+  background: #28282b;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(40, 40, 43, 0.5);
+  backdrop-filter: blur(10px);
+}
+
+/* === Heading === */
+.heading {
+  color: rgb(224, 220, 213);
+  text-align: center;
+  font-size: 1.7rem;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+/* === Inputs & Select === */
+.form-input {
+  width: 100%;
+  padding: 15px;
+  margin: 10px 0;
+  background: #28282b;
+  border: none;
+  border-bottom: 1px solid white;
+  color: #c7c7c7;
+  font-size: 1rem;
+  font-family: 'Segoe UI', sans-serif;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.form-input::placeholder {
+  color: #c7c7c7;
+  opacity: 1;
+}
+
+.form-input:focus {
+  transform: scale(1.01);
+}
+
+/* === Select Specific Fix === */
+.form-input select {
+  background: #28282b;
+  color: #c7c7c7;
+  cursor: pointer;
+}
+
+.form-input option {
+  background: #28282b;
+  color: #c7c7c7;
+}
+
+/* === Link Below Form === */
+.account-link {
+  text-align: center;
+  margin: 15px 0;
+  font-size: 1rem;
+  color: rgb(224, 220, 213);
+}
+
+.account-link a {
+  color: #0078d4;
+  text-decoration: none;
+  font-weight: 600;
+  margin-left: 5px;
+}
+
+.account-link a:hover {
+  text-decoration: underline;
+  color: #005a9e;
+}
+
+/* === Submit Button === */
+.submit-btn {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  font-size: 1rem;
+  font-weight: 700;
+  border: none;
+  background-color: #47a9ff;
+  color: rgb(208, 208, 208);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.submit-btn:hover:not(:disabled) {
+  transform: translateY(-4px);
+  background-color: #0078d4;
+}
+
+.submit-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
