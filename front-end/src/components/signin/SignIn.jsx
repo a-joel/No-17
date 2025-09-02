@@ -45,7 +45,7 @@ function SignIn() {
 
     try {
       // ✅ Fix: Missing // in URL
-      const res = await axios.post('http://localhost:8080/api/users/auth/login', form);
+      const res = await axios.post(`${import.meta.env.VITE_BASE_URL}/api/users/auth/login`, form);
 
       // ✅ Save token
       localStorage.setItem('token', res.data.token);

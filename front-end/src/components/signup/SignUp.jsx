@@ -58,7 +58,7 @@ function SignUp() {
     }
 
     try {
-      await axios.post('http://localhost:8080/api/users/auth/register',
+      await axios.post(`${import.meta.env.VITE_BASE_URL}/api/users/auth/register`,
         form
       );
 

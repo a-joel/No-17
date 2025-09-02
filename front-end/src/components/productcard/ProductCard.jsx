@@ -9,7 +9,7 @@ function ProductCard() {
 
   useEffect(() => {
     axios
-      .get("https://assignment-17-1.onrender.com/api/products")
+      .get(`${import.meta.env.VITE_BASE_URL}/api/products`)
       .then((res) => {
         setResProducts(res.data); // res.data is the array
         setLoading(false);
